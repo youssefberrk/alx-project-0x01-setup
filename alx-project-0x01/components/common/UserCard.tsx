@@ -1,8 +1,8 @@
 import React from 'react';
-import { UserProps } from '../../interfaces';
+import { UserProps } from '../../interfaces'; // Make sure UserProps is imported
 
 interface UserCardProps {
-  user: UserProps;
+  user: UserProps; // Correctly type the user prop using UserProps
 }
 
 const UserCard: React.FC<UserCardProps> = ({ user }) => {
