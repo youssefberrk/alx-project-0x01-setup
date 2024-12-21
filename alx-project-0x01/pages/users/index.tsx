@@ -7,8 +7,8 @@ interface UsersProps {
   posts: UserProps[]; // Define the type for the posts prop
 }
 
-const Users: React.FC = () => {
-  const [users, setUsers] = useState<UserProps[]>([]);
+const Users: React.FC<UsersProps> = ({ posts }) => {
+  const [users, setUsers] = useState<UserProps[]>(posts); // Initialize users state with posts
   const [showModal, setShowModal] = useState(false);
 
   // Function to handle adding a new user
